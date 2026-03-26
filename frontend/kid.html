@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids Clothing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Link your CSS file -->
+    <style>
+      .fa-cart-shopping {
+        font-size: 2em;
+        color: #ff523b;
+        position: relative;
+      }
+
+      .rent-cart {
+        padding: 5px;
+        border: 1px solid #9b8c8c;
+        position: absolute;
+        top: 150px;
+        right: 50px;
+        border-radius: 10px;
+        box-shadow: 4px 3px 0px #9b8c8c;
+        cursor: pointer;
+      }
+
+      button {
+        border: none;
+        cursor: pointer;
+      }
+
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none; /* Initially hidden */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 1000;
+      }
+
+      #overlay-above {
+        width: 80%; /* Responsive width */
+        max-width: 600px; /* Optional max width for smaller screens */
+        height: auto; /* Adjust height based on content */
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+        border-radius: 20px;
+        padding: 20px;
+        position: relative; /* Ensure position for internal elements */
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Optional shadow */
+      }
+
+      #close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #fff;
+        color: #ff523b;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #ff523b;
+        font-weight: bold;
+      }
+
+      .item-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff523b;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .item-name {
+        font-weight: bold;
+      }
+
+      .remove-btn {
+        background-color: #fff;
+        color: #ff523b;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+      }
+
+      .remove-btn:hover {
+        background-color: #ffddd0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="overlay">
+      <span id="close-btn">&times;</span>
+      <div id="overlay-above">
+        <h2 style="margin-bottom: 20px">Rented Items</h2>
+      </div>
+    </div>
+
+    <div class="rent-cart"><i class="fa-solid fa-cart-shopping"></i></div>
+    <div class="navbar">
+      <div class="logo">
+        <img src="image/LOGO2.png" width="150px" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="Product.html">Product</a></li> -->
+          <li><a href="About.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" id="__account-link">Account</a></li>
+          <span id="__user-greeting" style="display: none">Hi user!</span>
+          <button id="__logout-btn" style="display: none">Logout</button>
+        </ul>
+      </nav>
+    </div>
+    <div class="categories collection-bg">
+      <div class="row">
+        <h1>Kids Collection</h1>
+        <div class="categories">
+          <div class="row1">
+            <div class="col-4">
+              <img src="image/kid img4.jpg" alt="Kids Collection 1" />
+              <h4>Bharatnatyam costume</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-stroke"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>&#8377;600/per day</p>
+              <a href="" class="btn">Rent Now</a>
+            </div>
+            <div class="col-4">
+              <img src="image/kid img5.jpg" alt="Kids Collection 2" />
+              <h4>Rani Lakshmi Bai costume</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>&#8377;400/per day</p>
+              <a href="" class="btn">Rent Now</a>
+            </div>
+            <div class="col-4">
+              <img src="image/kid img6.jpg" alt="Kids Collection 3" />
+              <h4>Saraswati Mata costume</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>&#8377;400/per day</p>
+              <a href="" class="btn">Rent Now</a>
+            </div>
+            <div class="col-4">
+              <img src="image/kid img7.jpg" alt="Kids Collection 4" />
+              <h4>Krishna Complete costume</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>&#8377;500/per day</p>
+              <a href="" class="btn">Rent Now</a>
+            </div>
+            <div class="col-4">
+              <img src="image/kid img14.jpg" alt="Kids Collection 5" />
+              <h4>Lion Costume</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>&#8377;300/per day</p>
+              <a href="" class="btn">Rent Now</a>
+            </div>
+            <div class="col-4">
+              <img src="image/kid img15.jpg" alt="Kids Collection 6" />
+              <h4>Black Commando dress</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>&#8377;400/per day</p>
+              <a href="" class="btn">Rent Now</a>
+            </div>
+            <div class="col-4">
+              <img src="image/kid img16.jpg" alt="Kids Collection 7" />
+              <h4>Lord Shiva Costume</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>&#8377;300/par day</p>
+              <a href="" class="btn">Rent Now</a>
+            </div>
+            <div class="col-4">
+              <img src="image/kid img17.jpg" alt="Kids Collection 8" />
+              <h4>Garba dress</h4>
+              <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>&#8377;400/par day</p>
+              <a href="" class="btn">Rent Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 styke. All rights reserved.</p>
+    </footer>
+
+    <script src="js/dist/bundle.js" defer></script>
+  </body>
+</html>

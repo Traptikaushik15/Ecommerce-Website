@@ -1,0 +1,474 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+       
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    width: 100%;
+  }
+
+  footer p {
+    color: #fff;
+  }
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 10;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-table;
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+    color:#353131;
+}
+/* Styling for Login Form */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    display: block;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff523b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-container .btn:hover {
+    background-color: #563434;
+}
+
+.login-container p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-container a {
+    color: #ff523b;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+p{
+    color: #353131;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 25px;
+    padding-right: 25px;
+
+}
+ .row{
+    display: flex;
+    align-items:  last baseline baseline;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+
+
+
+
+.col-2{
+    flex-basis: 50%;
+    min-width:200px ;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 0px;
+    padding-right: 5px;
+    border-radius: 18px;
+}
+ .col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+ }
+ .btn{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin:30px 0;
+    border-radius: 30px;
+    transition: background 0.5s ;
+
+ }
+
+ .btn:hover{
+    background: #563434;
+ }
+
+ .header{
+    background: radial-gradient(#fff,#faf8f8);
+ }
+ .header .row{
+    margin-top: 70px;
+ }
+
+ /* Categories Section */
+.categories h3 {
+    font-size: 24px;
+    margin: 5px 0 3px;
+    color: #333;
+}
+
+.categories p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.categories .btn {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Container for Categories */
+.categories .row1 {
+    display: flex;               /* Enable Flexbox */
+    justify-content: space-around; /* Space out the items evenly */
+    align-items: center;         /* Align items vertically */
+    gap: 20px;                   /* Add spacing between sections */
+    flex-wrap: wrap; 
+    background: radial-gradient(#fde8e8,#fae8e8);          /* Prevent wrapping to the next line */
+    
+}
+.collection-bg{
+    background: radial-gradient(#fde8e8,#fae8e8);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Styling for Images */
+/* Styling for Images inside col-3 */
+.col-3 img {
+    width: 300px;                /* Set equal width for all images */
+    height: 300px;               /* Set equal height for all images */
+    object-fit: cover;           /* Ensure the images are cropped properly to fit the size */
+    border-radius: 8px;          /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better appearance */
+}
+
+/* Styling for Columns (col-3) */
+.col-3 {
+    display: flex;                /* Makes the col-3 behave as a flex container */
+    flex-direction: column;       /* Align items vertically (text first, then button) */
+    justify-content: center;      /* Vertically centers contents (like image and text) */
+    align-items: center;          /* Horizontally center content inside the div */
+    text-align: center;           /* Centers the text inside the div */
+    flex-grow: 1;                 /* Allows columns to grow to take space */
+    max-width: 30%;               /* Each column can take max 30% of the row */
+    padding: 10px;                /* Adds some internal padding */
+    box-sizing: border-box;       /* Makes sure padding is included in width */
+}
+
+/* Styling for the parent Row (roww) */
+.roww {
+    display: flex;
+    flex-wrap: wrap;               /* Allow wrapping of child items */
+    justify-content: space-between;/* Ensure equal space between columns */
+    gap: 10px;                     /* Space between the col-3 divs */
+    margin-top: 10px;              /* Adds margin at the top of row */
+    padding: 0 10px;               /* Adds left and right padding in the row */
+    background-color: bisque;
+}
+
+/* If needed, specifically style each col-3 inside roww */
+.roww > .col-3 {
+    flex-grow: 0;                  /* Avoid growing beyond a specific size */
+    width: 30%;                    /* Assign each child column 30% width */
+    margin-top: 20px;
+}
+
+
+
+.categories{
+    margin: 70px 0;
+    flex-wrap: wrap;
+}
+.col-4{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;  
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+
+.categories .rating {
+    display: flex;               /* Use flexbox to align the stars in a row */
+    gap: 5px;                    /* Space between the stars */
+    color: #f1ce07;              /* Gold color for the stars */
+    font-size: 18px;             /* Size of the stars */
+}
+
+.categories .rating .fa-star, 
+.categories .rating .fa-star-half-stroke {
+    color: #f1ce07;              /* Star color (gold) */
+}
+
+.categories .rating .fa-star-half-stroke {
+    color: #f1ce07;              /* Color for half star */
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 40px;
+    position: relative;
+    line-height: 60px;
+    
+}
+.title::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff523b;
+    transition: transform 0.5s;
+}
+.col-4:hover{
+    transform:translateY(-5px) ;
+}
+
+.offer{
+    background: radial-gradient(#fde8e8,#fae8e8);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+.col-2 .offer-img{
+    max-width: 100%;
+    padding: 0px;
+    padding-right: 5px;
+    border-radius: 18px;
+    width: 300px;
+    height: 500px;
+}
+.small{
+    color: #333;
+}
+
+
+    
+.testimonial .row {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping if screen size is small */
+    justify-content: space-between; /* Adds space between columns */
+}
+
+.testimonial .col-3 {
+    flex-basis: 30%; /* Adjust width of each column */
+    margin-bottom: 20px; /* Space below each testimonial */
+    text-align: center; /* Center-align content */
+}
+
+.testimonial-comment {
+    margin-bottom: 15px; /* Add space between comment and image */
+}
+
+.testimonial-comment p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.testimonial .rating {
+    display: flex;
+    justify-content: center; 
+    gap: 5px;
+    color: #f1ce07; 
+}
+.testimonial-image img {
+    width: 80px; 
+    height: 80px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin: 10px 0; 
+}
+
+.testimonial-image h3 {
+    font-size: 16px;
+    color: #333;
+}
+
+itle>Men's Clothing</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Link your CSS file -->
+    <style>
+      .fa-cart-shopping {
+        font-size: 2em;
+        color: #ff523b;
+        position: relative;
+      }
+
+      .rent-cart {
+        padding: 5px;
+        border: 1px solid #9b8c8c;
+        position: absolute;
+        top: 100px;
+        right: 50px;
+        border-radius: 10px;
+        box-shadow: 4px 3px 0px #9b8c8c;
+        cursor: pointer;
+      }
+
+      button {
+        border: none;
+        cursor: pointer;
+      }
+
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none; /* Initially hidden */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 1000;
+      }
+
+      #overlay-above {
+        width: 80%; /* Responsive width */
+        max-width: 600px; /* Optional max width for smaller screens */
+        height: auto; /* Adjust height based on content */
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+        border-radius: 20px;
+        padding: 20px;
+        position: relative; /* Ensure position for internal elements */
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Optional shadow */
+      }
+
+      #close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #fff;
+        color: #ff523b;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #ff523b;
+        font-weight: bold;
+      }
+
+      .item-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff523b;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .item-name {
+        font-weight: bold;
+      }
+
+      .remove-btn {
+        background-color: #fff;
+        color: #ff523b;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+      }
+
+      .remove-btn:hover {
+        background-color: #ffddd0;
+      }
+   
+      #__logout-btn{display: inline-block;
+        background: #ff523b;
+        border: none;
+        padding: 10px;
+        margin-left: 10px;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;}

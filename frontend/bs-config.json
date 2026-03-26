@@ -1,0 +1,10 @@
+{
+  "port": 3001,
+  "files": ["./**/*.{html,htm,css,js}"],
+  "server": {
+    "baseDir": "./",
+    "routes": {
+      "/api": "http://localhost:3000"
+    }
+  }
+}

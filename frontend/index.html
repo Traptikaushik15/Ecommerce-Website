@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentalCloth |E-commerce website</title>
+    <link rel="stylesheet" href ="style.css">
+    <!-- <link href="https://fonts.googleais.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        #__logout-btn{display: inline-block;
+    background: #ff523b;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;}
+
+    .fa-cart-shopping {
+        font-size: 2em;
+        color: #ff523b;
+        position: relative;
+      }
+
+      .rent-cart {
+        padding: 10px;
+        border: 1px solid #9b8c8c;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        border-radius: 10px;
+        box-shadow: 4px 3px 0px #9b8c8c;
+        cursor: pointer;
+      }
+
+      button {
+        border: none;
+        cursor: pointer;
+      }
+
+      #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none; /* Initially hidden */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        z-index: 1000;
+      }
+
+      #overlay-above {
+        width: 80%; /* Responsive width */
+        max-width: 600px; /* Optional max width for smaller screens */
+        height: auto; /* Adjust height based on content */
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+        border-radius: 20px;
+        padding: 20px;
+        position: relative; /* Ensure position for internal elements */
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Optional shadow */
+      }
+
+      #close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #fff;
+        color: #ff523b;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid #ff523b;
+        font-weight: bold;
+      }
+
+      .item-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff523b;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .item-name {
+        font-weight: bold;
+      }
+
+      .remove-btn {
+        background-color: #fff;
+        color: #ff523b;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+      }
+
+      .remove-btn:hover {
+        background-color: #ffddd0;
+      }
+
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        <span id="close-btn">&times;</span>
+        <div id="overlay-above">
+          <h2 style="margin-bottom: 20px">Rented Items</h2>
+        </div>
+      </div>
+  
+      <div class="rent-cart"><i class="fa-solid fa-cart-shopping"></i></div>
+
+ <div class="header">
+
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="image/LOGO2.png" width="150px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <!-- <li><a href="Product.html">Product</a></li> -->
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" id="__account-link">Account</a></li>
+                <span id="__user-greeting" style="display: none;">Hi user!</span>
+                <button id="__logout-btn" style="display: none;">Logout</button>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="row">
+       <div class="col-2">
+        <h1>Why Buy.. <br> When You Can Rent ! </h1>
+        <p> "From everyday essentials to statement pieces, our rental collection is here to redefine how you dress. Affordable, <br>sustainable, and effortless fashion, tailored for your lifestyle."</p>
+         <a href="#our-collection" class="btn">Explore Now &#8594; </a>
+       </div>
+       <div class="col-2">
+        <img src="image/image.png" >
+
+       </div>
+    </div>
+  
+</div>
+<div class="categories">
+    <h2 class="title" id="our-collection">Our Collection</h2>
+    <div class="roww" >
+      <br>
+        <!-- Men's Section -->
+        <div class="col-3">
+            <img src="image/MEN image1.jpg" alt="Men's Clothing">
+            <a class="btn" href="men.html" > Men </a>
+            
+        </div>
+
+        <!-- Women's Section -->
+        <div class="col-3">
+            <img src="image/Wo image1.jpg" alt="Women's Clothing">
+            <a class="btn" href="women.html"> Women </a>
+           
+        </div>
+
+        <!-- Kids' Section -->
+        <div class="col-3" >
+            <img src="image/kid img1.jpg" alt="Kids' Clothing">
+         <a class="btn" href="kid.html"> Kids </a>
+            
+         </div>
+    </div>
+</div>
+
+
+ <div class="categories">
+    <div class="small-container">
+     <h2 class="title">Featured Product</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="image/kid img9.jpg">
+                <h4> party suit</h4>
+                <div class ="rating">
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star-half-stroke"></i>
+                  
+                </div>
+            </div>  
+            <div class="col-4">
+                <img src="image/MEN image6.jpg">
+                <h4> Kurta </h4>
+                <div class ="rating">
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>
+                  
+                </div>
+            </div>  
+            <div class="col-4">
+                <img src="image/Wo image8.jpg">
+                <h4> Party</h4>
+                <div class ="rating">
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star-half-stroke"></i>
+                  
+                </div>
+            </div>  
+            <div class="col-4">
+                <img src="image/kid img8.jpg">
+                <h4> Garba</h4>
+                <div class ="rating">
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-stroke"></i>
+                  
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="image/kid img4.jpg">
+                <h4>Bharatnatyam</h4>
+                <div class ="rating">
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-stroke"></i>
+                  
+                </div>
+                
+            </div>
+            <div class="col-4">
+                <img src="image/Wo image6.jpg">
+                <h4> Lehenga</h4>
+                <div class ="rating">
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>  
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                  
+                </div>
+            </div> 
+       </div>  
+    </div>  
+</div>
+
+<div class="offer">
+    <div class="small-container">
+        <div class="row ">
+            <div class="col-2">
+                <img src="image/offer3.jpeg" class="offer-img">
+            </div>
+            <div class="col-2">
+                <p>Exclusively Available on Cloth Hub</p>
+                <h1>Royal Jewellery</h1>
+                <small>Explore our collection now and pair your lehenga with accessories that bring out your inner radiance.Get a flawless, head-to-toe traditional look that turns heads at every occasion!</small>
+            <br/>
+                    <a href="" class="btn">Rent Now &#8594;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <div class="testimonial-comment">
+                    <i class="fa fa-quote-left"></i>
+                    <p> STYKE has been a great platform for  to find fashionable, affordable clothes that I can rent out. I've rented clothes for various occasions and they've all been loved. I highly recommend this platform to anyone looking for a cheap and stylish way to dress up.
+                    </p>
+                    <i class="fa fa-quote-right"></i>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>  
+                        <i class="fa fa-star"></i>  
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-image">
+                    <img src="image/user3.jpeg" alt="User">
+                    <h3>Aarti</h3>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="testimonial-comment">
+                    <i class="fa fa-quote-left"></i>
+                    <p>STYKE has been a great platform for me to find fashionable, affordable clothes that I can rent out. I've rented clothes for various occasions and they've all been loved.</p>
+                    <i class="fa fa-quote-right"></i>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>  
+                        <i class="fa fa-star"></i>  
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-image">
+                    <img src="image/user.jpg" alt="User">
+                    <h3>Sonam</h3>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="testimonial-comment">
+                    <i class="fa fa-quote-left"></i>
+                    <p> I've rented clothes  
+                        for various occasions and they've all been loved. I highly recommend this platform to anyone looking for a cheap and stylish way to dress up.STYKE has been a great platform for me to find fashionable, affordable clothes that I can rent out. 
+                    </p>
+                    <i class="fa fa-quote-right"></i>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>  
+                        <i class="fa fa-star"></i>  
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-image">
+                    <img src="image/user2.webp" alt="User">
+                    <h3>Jane Doe</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 styke. All rights reserved.</p>
+</footer>
+</body>
+
+<script src="js/dist/bundle.js" defer></script>
+</html>
+
+
+
+
+
