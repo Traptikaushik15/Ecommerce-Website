@@ -53,7 +53,6 @@ STYKE is a full-stack e-commerce platform for renting luxury clothing. It offers
 ---
 
 
-![Login](frontend/screenshots/Screenshot_login.png.png)
-![Homepage](frontend/screenshots/Screenshot_homepage.png.png)
-![Contact](frontend/screenshots/Screenshot_contact.png.png)
-
+![Login](frontend/screenshots/login.png)
+![Homepage](frontend/screenshots/homepage.png)
+![Contact](frontend/screenshots/contact.png)
